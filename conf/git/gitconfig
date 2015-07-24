@@ -1,0 +1,12 @@
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	cl = clone
+[color]
+	ui = true
+[credential]
+	helper = store
+[core]
+	excludesfile = $HOME/.shutils/conf/git/gitignore_global
