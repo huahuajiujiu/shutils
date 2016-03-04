@@ -1,40 +1,72 @@
-URxvt.preeditType:Root
-URxvt.inputMethod:ibus
-URxvt.depth:32
-URxvt.background:[90]#000000
-URxvt.foreground:#ffffff
-URxvt.colorBD:Gray95
-URxvt.colorUL:Green
-URxvt.color1:Red2
-URxvt.color4:RoyalBlue
-URxvt.color5:Magenta2
-URxvt.color8:Gray50
-URxvt.color10:Green2
-URxvt.color12:DodgerBlue
-URxvt.color14:Cyan2
-URxvt.color15:Gray95
-URxvt.urlLauncher:chromium
-URxvt.matcher.button:1
-Urxvt.perl-ext-common:matcher
-
+! General
+URxvt.termNmae: rxvt-unicode-256color
+URxvt.borderLess:False
+URxvt.cursorBlink:False
+URxvt.saveLines:65536
 URxvt.scrollBar:True
 URxvt.scrollBar_right:True
-URxvt.scrollBar_floating:False
+URxvt.scrollBar_floating:True
 URxvt.scrollstyle:plain
-
-URxvt.mouseWheelScrollPage:True
 URxvt.scrollTtyOutput:False
 URxvt.scrollWithBuffer:True
 URxvt.scrollTtyKeypress:True
-URxvt.cursorBlink:False
-URxvt.saveLines:3000
+URxvt.iconFile: /usr/share/icons/gnome/16x16/apps/terminal.png
 
-URxvt.borderLess:False
+! URxvt shortkeys
+!URxvt.keysym.F11: perl:fullscreen:switch
 
-Xft.dpi:96
-URxvt.font:xft:DejaVu Sans Mono:size=11:style=Regular:antialias=true
-URxvt.boldfont:xft:DejaVu Sans Mono:size=11:style=BOld:antialias=true
+! Extensions
+!!!!No white space between extension names
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
 
-URxvt.inheritPixmap:true
-URxvt.tintColor:Gray25
-URxvt.shading:60
+! Input Method
+URxvt.preeditType:OffTheSpot
+URxvt.inputMethod:fcitx
+
+! Fonts
+URxvt.font:xft:文泉驿等宽微米黑:size=12
+URxvt.boldfont: 文泉驿等宽微米黑:style=Bold:size=12
+
+! Colorscheme: Solarized light
+URxvt.depth:32
+URxvt.background:            #2c2c2c
+URxvt.foreground:            #dcdccc
+URxvt.fading:                40
+URxvt.fadeColor:             #fdf6e3
+URxvt.cursorColor:           #586e75
+URxvt.pointerColorBackground:#93a1a1
+URxvt.pointerColorForeground:#586e75
+
+!! Black dark/light
+URxvt.color0:                #3f3f3f
+URxvt.color8:                #709080
+
+!! Red dark/light
+URxvt.color1:                #705050
+URxvt.color9:                #dca3a3
+
+!! Green dark/light
+URxvt.color2:                #60b4a8
+URxvt.color10:               #72d5a3
+
+!! Yellow dark/light
+URxvt.color3:                #dfaf8f
+URxvt.color11:               #f0dfaf
+
+!! Blue dark/light
+URxvt.color4:                #9ab8d7
+URxvt.color12:               #94bff3
+
+!! Magenta dark/light
+URxvt.color5:                #dc8cc3
+URxvt.color13:               #dc8cc3
+
+!! Cyan dark/light
+URxvt.color6:                #8cd0d3
+URxvt.color14:               #93e0e3
+
+!! White dark/light
+URxvt.color7:                #dcdccc
+URxvt.color15:               #ffffff
