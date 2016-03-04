@@ -1,7 +1,7 @@
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
 
-export PATH="$HOME/bin:$HOME/.shutils/bin:$HOME/.gem/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.shutils/bin:$HOME/.gem/bin:$HOME/.rbenv/bin:$PATH"
 
 export AWS_CLI=/usr/local/bin/aws
 export AWS_REGION=ap-southeast-2

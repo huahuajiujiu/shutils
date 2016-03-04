@@ -11,8 +11,8 @@ git_branch() {
 }
 
 git_commit() {
-    if git show --oneline --minimal --shortstat > /dev/null 2> /dev/null; then
-        git show --oneline --minimal --shortstat | head -n1 | awk '{print $1}'
+    if git log > /dev/null 2> /dev/null; then
+        git log | head -n1 | cut -f2 -d' '
         return 0
     else
         return 1
@@ -23,7 +23,7 @@ git_info() {
     local branch=$(git_branch)
     if git_commit > /dev/null; then
         local commit=$(git_commit)
-        echo "(${branch}:${commit}) "
+        echo "(${branch}:${commit:0:8}) "
     fi
 }
 
