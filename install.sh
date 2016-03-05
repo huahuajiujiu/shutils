@@ -11,7 +11,8 @@ repo_url=https://github.com/yovin/shutils.git
 repo_dir=$HOME/.shutils
 
 setup_bash() {
-    case `uname -o` in
+    local ostype=`uname -o 2> /dev/null || uname -s`
+    case $ostype in
         Darwin)
             echo "source $HOME/.shutils/conf/shell/profile" >> $HOME/.bash_profile
             echo "source $HOME/.shutils/conf/shell/bashrc" >> $HOME/.bash_profile
