@@ -38,7 +38,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+--beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init("/home/ywhe/.config/awesome/themes/wabbit/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -190,8 +191,21 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+
+    local batterywidget = wibox.widget.textbox()
+    batterywidget:set_text("Battery")
+    batterywidgettimer = timer({ timeout = 5 })
+
+    batterywidgettimer:connect_signal("timeout", function()
+        fh = assert(io.popen("acpi | cut -d, -f 2 -", "r"))
+        batterywidget:set_text("|" .. fh:read("*l") .. "|")
+        fh:close()
+    end)
+    batterywidgettimer:start()
+
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
+    right_layout:add(batterywidget)
     right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
@@ -381,7 +395,7 @@ client.connect_signal("manage", function (c, startup)
     c:connect_signal("mouse::enter", function(c)
         if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
             and awful.client.focus.filter(c) then
-            client.focus = c
+            -- client.focus = c
         end
     end)
 
