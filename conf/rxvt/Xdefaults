@@ -26,8 +26,8 @@ URxvt.preeditType:OffTheSpot
 URxvt.inputMethod:fcitx
 
 ! Fonts
-URxvt.font:xft:文泉驿等宽微米黑:size=12
-URxvt.boldfont: 文泉驿等宽微米黑:style=Bold:size=12
+URxvt.font:xft:文泉驿等宽微米黑:size=11
+URxvt.boldfont: 文泉驿等宽微米黑:style=Bold:size=11
 
 ! Colorscheme: Solarized light
 URxvt.depth:32
