@@ -16,7 +16,7 @@ set autoread
 set number
 
 " Enable the use of the mouse.
-set mouse=a
+"set mouse=a
 
 " Minimal number of screen lines to keep above and below the cursor.
 set scrolloff=10
