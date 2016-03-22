@@ -6,8 +6,8 @@ A collection of programs and configurations for shells.
 
 via curl
 
-`curl -fsSL https://raw.githubusercontent.com/yovin/shutils/master/install.sh | sh`
+`curl -fsSL https://raw.githubusercontent.com/huahuajiujiu/shutils/master/install.sh | sh`
 
 via wget
 
-`wget https://raw.githubusercontent.com/yovin/shutils/master/install.sh -O - | sh`
+`wget https://raw.githubusercontent.com/huahuajiujiu/shutils/master/install.sh -O - | sh`
