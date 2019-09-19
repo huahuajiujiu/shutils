@@ -7,7 +7,7 @@ if [ -d $HOME/.shutils ]; then
     exit 1
 fi
 
-repo_url=https://github.com/yovin/shutils.git
+repo_url=https://github.com/huahuajiujiu/shutils.git
 repo_dir=$HOME/.shutils
 
 setup_bash() {
